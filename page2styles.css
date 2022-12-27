@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=K2D&display=swap');
 
-:root{
-    --hidden-text: 2vw;
-}
-
 html, body { 
     margin: 0;
     min-height: 100%;
@@ -55,7 +51,7 @@ html, body {
     border: 4px solid black;
     border-radius: 1vw;
     padding: 3px;
-    background-color: rgb(214, 32, 246);
+    background-color: black;
     color: whitesmoke;
 }
 
@@ -63,7 +59,7 @@ h1 {
   font-family: 'Luckiest Guy', cursive;
   font-size: 7vw;
   text-align: center;
-  text-shadow: 0.4vw 0.4vw #23d5ab;
+  text-shadow: 0.6vw 0.6vw #23d5ab;
   margin-bottom: 2.5vw;
 }
 
@@ -74,7 +70,7 @@ h2 {
     text-shadow: 0.2vw 0.3vw 2vw #d523b4;
   }
 
-#intro, #page2-intro {
+#intro {
     width: 80%;
     margin: 40px auto 60px;
     font-size: 1.7vw;
@@ -172,9 +168,9 @@ article#dargo > img {
     object-position: 50% 0;
 }
 
-#home, #back-to-home{
+#home{
     display: block;
-    width:fit-content;
+    width: 12%;
     margin: auto;
     text-align: center;
     font-size: 2vw;
@@ -183,197 +179,7 @@ article#dargo > img {
     border-radius: 1vw;
 }
 
-.body-margin {
-    width: 80%;
-    margin: 3vh auto;
-    display: flow-root;
- }
 
- #page2-h1 {
-    margin: 2vw auto 2vw;
- }
-
- .buttons-div{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.buttons-div > button {
-    border: 0.5vw solid black;
-    font-size: 3vw;
-    margin: 0.5rem;
-    flex-grow: 1;
-    padding: 2vh 0 2vh 0;
-}
-
-  button {
-    width: 6em;
-    background-color: #ee7752;
-    line-height: 0.8;
-    transition: background-color 0.8s;
-  }
-
-  button:hover {
-    background-color: #000;
-  }
-
-  #back-to-home:hover, #home:hover {
-    background-color: rgb(87, 5, 5);
-    color: yellow;
-  }
-  
-  #back-to-home{
-    margin: 3vw auto;
-  }
-  
-  button:active {
-  background-color: black;
-  transition: none;
-}
-
-
-  button:hover span {
-    display: none
-  }
-
-  
-  #button1:hover:before {
-    content: "crazy";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button2:hover:before {
-    content: "kid";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button3:hover:before {
-    content: "hell";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button4:hover:before {
-    content: "metre";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button5:hover:before {
-    content: "second";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button6:hover:before {
-    content: "Parental guidance moment!";
-    color: #cf16b3;
-  }
-  #button7:hover:before {
-    content: "Censored!";
-    color: #cf16b3;
-  }
-  #button8:hover:before {
-    content: "An edible slug; a Hynerian delicacy";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button9:hover:before {
-    content: "A military alien race with tall statures and face tentacles";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button10:hover:before {
-    content: "Censored!";
-    color: #cf16b3;
-  }
-  #button11:hover:before {
-    content: "an alcoholic drink, ten times as potent as Earth whiskey";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button12:hover:before {
-    content: "crispy cooked meat";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button13:hover:before {
-    content: "a unit of speed";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button14:hover:before {
-    content: "used to manufacture pulse weapon ammunition";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button15:hover:before {
-    content: "fantastic";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button16:hover:before {
-    content: "rubbish";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button17:hover:before {
-    content: "a Luxan physiological trait, typified by bouts of uncontrollable mania";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button18:hover:before {
-    content: "an animal appendage";
-    color: #059626;
-    font-size:2vmin;
-  }
-  #button19:hover:before {
-    content: "girl";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button20:hover:before {
-    content: "antique Luxan bladed weapon";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button21:hover:before {
-    content: "a unit of currency";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button22:hover:before {
-    content: "a deadly, asteroid-sized space-dog!";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button23:hover:before {
-    content: "Censored!";
-    color: #cf16b3;
-  }
-  #button24:hover:before {
-    content: "Hynerian exclamation";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button25:hover:before {
-    content: "a dental hygiene worm (yes, an actual alien worm)";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button26:hover:before {
-    content: "the highest ranking member of the Hynerian royalty";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button27:hover:before {
-    content: "1 hour";
-    color: #059626;
-    font-size: 2vmin;
-  }
-  #button28:hover:before {
-    content: "an autonomous repair bot";
-    color: #059626;
-    font-size: 2vmin;
-  }
 
 @media (max-width: 600px) {
     #grid {
@@ -415,7 +221,6 @@ article#dargo > img {
 
     .flex-container-1 {
         margin: 20px auto 20px;
-        gap: 1vw;
     }
 }
   
@@ -450,7 +255,7 @@ article#dargo > img {
         justify-content: center;
     }
 
-    article > p, #intro, #page2-intro {
+    article > p, #intro {
         font-size: 25px;
       }
 
@@ -458,21 +263,13 @@ article#dargo > img {
         font-size: 40px;
     }
 
-    #intro, #page2-intro, #submit-form {
+    #intro {
         width: 1200px;
         margin: 80px auto 100px;
     }
 
-    #home, #back-to-home {
-        font-size: 30px;
-        width: 200px;
-    }
-
-    .buttons-div > button {
-        flex-grow: 1;
-        font-size: 50px;
-        max-width: 400px;
-        border: 9px solid black;
+    h2 {
+        font-size: 70px;
     }
     
 }
