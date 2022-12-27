@@ -62,6 +62,11 @@ html, body {
     margin: 0 0.4vw;
 }
 
+.flex-item-1:hover {
+    background-color: rgb(32, 249, 238);
+    color:rgb(0, 0, 0);
+}
+
 h1 {
   width: 90%;
   margin-left: auto;
@@ -89,7 +94,7 @@ h2 {
     text-shadow: 0.2vw 0.3vw 2vw #d523b4;
   }
 
-#intro, #page2-intro {
+.intro, #page2-intro {
     width: 80%;
     margin: 40px auto 60px;
     font-size: 1.7vw;
@@ -108,7 +113,7 @@ h2 {
 #aeryn {grid-area: aeryn;}
 #dargo {grid-area: dargo;}
 
-#grid {
+.grid {
     display: grid;
     grid-template-areas: 
         'scorpy crichton'
@@ -123,7 +128,7 @@ h2 {
     width: 85%;
 }
 
-#grid > article {
+.grid > article {
     border: 2px solid black;
     border-radius: 1vw;
     padding: 4px;
@@ -133,7 +138,7 @@ h2 {
     position: relative;
 }
 
-#grid > article::after {
+.grid > article::after {
     content: "";
     clear: both;
     display: table;
@@ -190,10 +195,11 @@ article#dargo > img {
 #home, #back-to-home{
     display: block;
     width:fit-content;
-    margin: auto;
+    margin: 3vw auto;
+    padding: 0.6vw;
     text-align: center;
     font-size: 2vw;
-    background-color: #e73c7e;
+    background-color: hsl(177, 100%, 51%);
     border: 3px solid black;
     border-radius: 1vw;
 }
@@ -206,6 +212,7 @@ article#dargo > img {
 
  #page2-h1 {
     margin: 2vw auto 2vw;
+    font-size: 6vw;
  }
 
  .buttons-div{
@@ -216,7 +223,7 @@ article#dargo > img {
 
 .buttons-div > button {
     border: 0.5vw solid black;
-    font-size: 3vw;
+    font-size: 2.5vw;
     margin: 0.5rem;
     flex-grow: 1;
     padding: 2vh 0 2vh 0;
@@ -238,10 +245,6 @@ article#dargo > img {
   #back-to-home:hover, #home:hover {
     background-color: rgb(87, 5, 5);
     color: yellow;
-  }
-  
-  #back-to-home{
-    margin: 3vw auto;
   }
   
   button:active {
@@ -390,8 +393,37 @@ article#dargo > img {
     font-size: 3vmin;
   }
 
+  .hovertext {
+    position: relative;
+    border-bottom: 1px dotted black;
+  }
+  
+  .hovertext:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 90%;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: left;
+    font-size: 2vw;
+    border-radius: 5px;
+    padding: 7px;
+    transition: opacity 1s ease-in-out;
+  
+    position: absolute;
+    z-index: 1;
+    left: 4%;
+    top: 100%;
+  }
+  
+  .hovertext:hover:before {
+    opacity: 1;
+    visibility: visible;
+  }
+
 @media (max-width: 600px) {
-    #grid {
+    .grid {
         width: 80%;
         margin-top: 5px;
         grid-template-areas: 
@@ -419,8 +451,8 @@ article#dargo > img {
         width: 50%;
         font-size: 3.2vw;
     }
-
-    #intro {
+    
+    .intro {
         font-size: 3.2vw;
         margin-top: 30px;
         margin-bottom: 35px;
@@ -445,16 +477,19 @@ article#dargo > img {
     #home {
         font-size: 3vw;
     }
+    .hovertext:before {
+        font-size: 3.2vw;
+    }
 }
   
 @media (min-width: 1300px) {
-    #grid {
+    .grid {
         grid-template-rows: 300px 300px;
     }
 }
 
 @media (min-width: 1500px) {
-    #grid {
+    .grid {
         grid-template-columns: 600px 600px;
         grid-auto-rows: auto;
         padding: 0;
@@ -467,6 +502,11 @@ article#dargo > img {
     h2, #subtitle {
         font-size: 70px;
     }
+
+    #page2-h1 {
+      font-size: 90px;
+    }
+
     .flex-item-1{
         font-size: 27px;
         margin: 0 10px 0 0;
@@ -475,7 +515,7 @@ article#dargo > img {
         padding-top: 30px;
     }
 
-    article > p, #intro, #page2-intro {
+    article > p, .intro, #page2-intro, .hovertext:before {
         font-size: 25px;
       }
 
@@ -483,7 +523,7 @@ article#dargo > img {
         font-size: 40px;
     }
 
-    #intro, #page2-intro, #submit-form {
+    .intro, #page2-intro {
         width: 1200px;
         margin: 80px auto 100px;
     }
@@ -491,6 +531,7 @@ article#dargo > img {
     #home, #back-to-home {
         font-size: 30px;
         width: 200px;
+        padding: 10px;
     }
 
     .buttons-div > button {
@@ -499,7 +540,7 @@ article#dargo > img {
         max-width: 400px;
         border: 9px solid black;
     }
-    
+
 }
 
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The wonderful world of Farscape</title>
     <link rel="stylesheet" href="./styles.css">
+    <script defer src="./script.js"></script>
 </head>
 <body>
     <nav class="flex-container-1">
@@ -26,7 +27,7 @@
           </a>
         </div>
         <div class="flex-item-1">
-          <a href="page2.html" target="blank">The language of Farscape</a>
+          <a href="page2.html">The language of Farscape</a>
         </div>
         <div class="flex-item-1">Fun questionnaire</div>
       </nav>
@@ -34,57 +35,63 @@
       <h1>Enter the world of Farscape: <br> a sci-fi TV show</h1>
       <p id="subtitle">Crazy aliens and ludicrous space adventures<p>
 
-      <p id="intro">Farscape is a science fiction television show that chronicles the adventures of Commander John Crichton, an astronaut who finds himself flung into the furthest reaches of the galaxy and embarks on an incredible journey involving many different alien species, a living ship, ruthless villains and much more.
+      <p class="intro">Farscape is a science fiction television show that chronicles the adventures of Commander John Crichton, an astronaut who finds himself flung into the furthest reaches of the galaxy and embarks on an incredible journey involving many different alien species, a living ship, ruthless villains and much more.
         <br><br>
-        During his many adventures and travels through space, John makes lots of new alien friends (as well as making many enemies). Below you will find a few brief profiles of the main characters depicted in this TV show. Simply hover over each character to read more about them.
+        During his many adventures and travels through space, John makes lots of new alien friends (as well as making many enemies). Below you will find a few brief profiles of the main characters depicted in this TV show. Simply <strong> hover over each character to read a little more about them</strong>.
       </p>
 
       <h2>Character descriptions</h2>
-      <section id="grid">
+      <section class="grid">
 
-        <article id="scorpy">
+        <article id="scorpy" class="hovertext" data-hover="
+        Born under traumatic circumstances, Scorpius endured a very difficult childhood under Scarran guardianship. At birth, he was taken by the Scarrans and never knew his birth parents. Whilst in captivity, he was severely mistreated and treated as a tool to serve the Scarrans. He relented for decades and was eventually able to escape his captors, soon joining the Peacekeepers and swiftly climbing the ranks through loyal service and competence. 
+        ">
             <h3>Scorpius</h3>
             <p>A multi-dimensional villain with complex motivations and a deep history. Pragmatic, resourceful and ruthless, he will stop at nothing to get what he wants.</p> 
             <img src="https://i.pinimg.com/originals/f9/93/60/f993604bc6e26595c4a2ce50387e7939.jpg" alt="Scorpius can often be seen wearing a menacing expression on his face, letting others know he is serious.">
         </article>
 
-        <article id="crichton">
+        <article id="crichton" class="hovertext" data-hover="
+        John always aspired to be an astronaut and follow in the footsteps of his dad. But he never dreamed of seeing the stars, much less being the very first human to make contact with not one, not two, and not three, but many different alien species. John's journey after leaving Earth was a very difficult one, full of pain and tragedy, yet despite everything, he eventually found a measure of peace in himself and in those around him.
+        ">
             <h3>Crichton</h3>
             <p>Commander John Crichton is Farscape's main protagonist. In a far away part of the galaxy, John finds himself at the centre of a series of incredible adventures.</p> 
             <img src="https://www.eightieskids.com/wp-content/uploads/2019/09/5Fan.png" alt="Commander John Crichton in space, in a far-away galaxy.">
         </article>
 
-        <article id="rygel">
+        <article id="rygel" class="hovertext" data-hover="Before his captivity, Domiar Rygel was sovereign to over 600 billion loyal subjects on his home planet, in the Hyneria cluster. His cousin orchestrated a coup which led to Rygel's capture by the Peacekeepers. Having been a member of the royal class all of his life, he had to learn to adjust to life as a prisoner. Eventually, he would acquire the means to break free of his captivity but only ending up having to constantly evade capture yet again. He is known for his voracious appetite and three stomachs that never seem to get full. Even in the heat of battle, food is always his main priority.">
             <h3>Rygel</h3>
             <p>Dominar Rygel the Sixteenth is a member of the Hynerian royalty. He was desposed in a coup by his cousin and imprisoned by the Peacekeepers for centuries.</p> 
             <img src="https://pbs.twimg.com/media/EGh21_BXkAEtOsK.jpg" alt="Regal Rygel poses majestically for all to admire.">
         </article>
 
-        <article id="zhaan">
+        <article id="zhaan" class="hovertext" data-hover="
+        Zhaan is a Delvian who has spent the last few years in Peacekeeper captivity. It was during this time that she managed to reconnect with her spiritual roots and to rise above her worldly worries. Zhaan prefers a peaceful solution to most problems but is pragmatic enough to recognise the need for an alternative approach in some situations. She is always on hand to provide guidance and counsel to those in need.
+        ">
             <h3>Zhaan</h3>
             <p>Despite striving for inner peace, Zhaan's life has been marked by violence and trauma, yet she never wavers from her spiritual path, even during her imprisonment.</p> 
             <img src="https://www.thecompanion.app/wp-content/uploads/sites/2/2020/11/Farscape-Featured-Image.jpg" alt="Zhaan's blue complexion, shared by all Delvians, is a result of chlorophyll pigmentation.">
         </article>
 
-        <article id="chianna">
+        <article id="chianna" class="hovertext" data-hover="Chianna comes from Nebari Prime, an authoritarian society built upon conformity, obedience and a value system which Chianna refused to live under. Instead, she chose a carefree life and would always rebel against authority.">
             <h3>Chianna</h3>
             <p>Chianna is on the run from a nefarious faction within her home planet. She seeks refuge with the rest of the crew which leads to a lot of chaos and mischief.</p> 
             <img src="https://www.giantfreakinrobot.com/wp-content/uploads/2020/10/chiana3-edited.jpg" alt="Chianna is having a quiet moment of reflection about...something.">
         </article>
 
-        <article id="crais">
+        <article id="crais" class="hovertext" data-hover="Before crossing paths with Crichton, Captain Bialar Crais held a position of respect and power within the Peacekeeper hierarchy, into which he was conscripted as a child. He burned a lot of bridges on his way to his eventual downfall but still managed to find some redemption at the end of it all.">
             <h3>Crais</h3>
             <p>Tactical, unforgiving and highly disciplined is Crais. Born and raised as a peacekeeper, he grew to respect the force of authority and embraced his servitude.</p> 
             <img src="https://i.pinimg.com/originals/13/25/16/1325161d450042ba97dd3e8e01aa7292.jpg" alt=".">
         </article>
 
-        <article id="dargo">
+        <article id="dargo" class="hovertext" data-hover="Dargo is a Luxan warrior, famoulsy known for his Luxan hyper-rage which causes him to come across as angry and aggressive. Yet another victim of the Peacekeepers, he certainly has a lot to be angry about and spends most of his time thinking of ways to find revenge. Dargo is Crichton's closest friend on the show and the two shared a very strong bond of camaraderie.">
             <h3>Dargo</h3>
             <p>A battle-scarred warrior, Dargo struggles to fight against his powerful rage, a rage born of past traumas. Years in captivity have only served to amplify his rage.</p> 
             <img src="https://m.media-amazon.com/images/M/MV5BNjA4Mjk2NjM5OV5BMl5BanBnXkFtZTgwMzQ4MzU1MjE@._V1_.jpg" alt=".">
         </article>
 
-        <article id="aeryn">
+        <article id="aeryn" class="hovertext" data-hover="Aeryn used to be a Peacekeeper and a prowler pilot but her service commission came to an abrupt end on the first day that she met Crichton (indeed, she often blames John for ruining her life). The two would eventually go on to have many colourful adventures, so perhaps it wasn't all so bad in the end.">
             <h3>Aeryn</h3>
             <p>Like Crais, Aeryn was also born into military service and knows no other way. But after being betrayed for carrying out her duty, she id forced to re-examine her worldview.</p> 
             <img src="https://1.bp.blogspot.com/-l8ww0vcvyGs/XypZtaAUx8I/AAAAAAAAAy4/s_ypYW-PW_EYAkCHWHmCoesXAMXlYtBGQCLcBGAsYHQ/s1600/aeryn3.png" alt="Aeryn looking into the distance, contemplating her next move.">
