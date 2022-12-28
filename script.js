@@ -1,65 +1,203 @@
-const scorpyExtendedBio = `<p class="intro"> Born under traumatic circumstances, Scorpius endured a very difficult childhood under Scarran guardianship. He relented for decades and was eventually able to escape his captors. </p>`;
+const mainDiv = document.querySelector(".main-div");
+const answers = [];
+const resultObj = {
+  chianna: 0,
+  crichton: 0,
+  scorpy: 0,
+  dargo: 0,
+  rygel: 0,
+  scorpy: 0,
+  aeryn: 0
+  };
 
-const grid = document.querySelector('.grid');
-const fullGrid = `<article id="scorpy" class="scorpy">
-<h3>Scorpius</h3>
-<p>A multi-dimensional villain with complex motivations and a deep history. Pragmatic, resourceful and ruthless, he will stop at nothing to get what he wants.</p> 
-<img src="https://i.pinimg.com/originals/f9/93/60/f993604bc6e26595c4a2ce50387e7939.jpg" alt="Scorpius can often be seen wearing a menacing expression on his face, letting others know he is serious.">
-</article>
+const firstQuestion = `<div class="question1 intro"> <strong> Question 1 </strong> <br><br> You find yourself in a brand new place where you don't understand the local language. What do you do?<br><br>
+<div>
+<input class="q1" type="radio" name="question1" value="crichton">
+<label for="q1">Use as many obscure pop culture references as possible when talking to everyone.</label>
+</div>
 
-<article id="crichton">
-<h3>Crichton</h3>
-<p>Commander John Crichton is Farscape's main protagonist. In a far away part of the galaxy, John finds himself at the centre of a series of incredible adventures.</p> 
-<img src="https://www.eightieskids.com/wp-content/uploads/2019/09/5Fan.png" alt="Commander John Crichton in space, in a far-away galaxy.">
-</article>
+<div>
+<input class="q1" type="radio" name="question1" value="aeryn">
+<label for="q1">Distrust everyone and always remain grumpy.</label>
+</div>
 
-<article id="rygel">
-<h3>Rygel</h3>
-<p>Dominar Rygel the Sixteenth is a member of the Hynerian royalty. He was desposed in a coup by his cousin and imprisoned by the Peacekeepers for centuries.</p> 
-<img src="https://pbs.twimg.com/media/EGh21_BXkAEtOsK.jpg" alt="Regal Rygel poses majestically for all to admire.">
-</article>
+<div>
+<input class="q1" type="radio" name="question1" value="scorpy">
+<label for="q1">Slither your way into other people's good graces.</label>
+</div>
 
-<article id="zhaan">
-<h3>Zhaan</h3>
-<p>Despite striving for inner peace, Zhaan's life has been marked by violence and trauma, yet she never wavers from her spiritual path, even during her imprisonment.</p> 
-<img src="https://www.thecompanion.app/wp-content/uploads/sites/2/2020/11/Farscape-Featured-Image.jpg" alt="Zhaan's blue complexion, shared by all Delvians, is a result of chlorophyll pigmentation.">
-</article>
+<div>
+<input class="q1" type="radio" name="question1" value="chianna">
+<label for="q1">Try and seduce as many of the locals as possible (or get banished for your efforts).</label>
+</div>
+</div>`;
 
-<article id="chianna">
-<h3>Chianna</h3>
-<p>Chianna is on the run from a nefarious faction within her home planet. She seeks refuge with the rest of the crew which leads to a lot of chaos and mischief.</p> 
-<img src="https://www.giantfreakinrobot.com/wp-content/uploads/2020/10/chiana3-edited.jpg" alt="Chianna is having a quiet moment of reflection about...something.">
-</article>
+const secondQuestion = `<div class="question2 intro"> <strong>Question 2</strong> <br><br> You haven't eaten in a long time and you are in the mood for a special treat. What do you go for?<br><br>
+<div>
+<input class="q2" type="radio" name="question2" value="rygel">
+<label for="q2">Marjools.</label>
+</div>
 
-<article id="crais">
-<h3>Crais</h3>
-<p>Tactical, unforgiving and highly disciplined is Crais. Born and raised as a peacekeeper, he grew to respect the force of authority and embraced his servitude.</p> 
-<img src="https://i.pinimg.com/originals/13/25/16/1325161d450042ba97dd3e8e01aa7292.jpg" alt=".">
-</article>
+<div>
+<input class="q2" type="radio" name="question2" value="crichton">
+<label for="q2">Chocolate.</label>
+</div>
 
-<article id="dargo">
-<h3>Dargo</h3>
-<p>A battle-scarred warrior, Dargo struggles to fight against his powerful rage, a rage born of past traumas. Years in captivity have only served to amplify his rage.</p> 
-<img src="https://m.media-amazon.com/images/M/MV5BNjA4Mjk2NjM5OV5BMl5BanBnXkFtZTgwMzQ4MzU1MjE@._V1_.jpg" alt=".">
-</article>
+<div>
+<input class="q2" type="radio" name="question2" value="chianna">
+<label for="q2">Raslak and fellip nectar.</label>
+</div>
 
-<article id="aeryn">
-<h3>Aeryn</h3>
-<p>Like Crais, Aeryn was also born into military service and knows no other way. But after being betrayed for carrying out her duty, she id forced to re-examine her worldview.</p> 
-<img src="https://1.bp.blogspot.com/-l8ww0vcvyGs/XypZtaAUx8I/AAAAAAAAAy4/s_ypYW-PW_EYAkCHWHmCoesXAMXlYtBGQCLcBGAsYHQ/s1600/aeryn3.png" alt="Aeryn looking into the distance, contemplating her next move.">
-</article>`;
+<div>
+<input class="q2" type="radio" name="question2" value="aeryn">
+<label for="q2">Tannot root.</label>
+</div>
+</div>`;
+
+const thirdQuestion = `<div class="question3 intro"> <strong>Question 3</strong> <br><br> You're bored and looking for something fun to do. Where do you go?<br><br>
+<div>
+<input class="q3" type="radio" name="question3" value="rygel">
+<label for="q3">Take a very long double-nap.</label>
+</div>
+
+<div>
+<input class="q3" type="radio" name="question3" value="crichton">
+<label for="q3">Wander through the corridors, singing and talking to yourself.</label>
+</div>
+
+<div>
+<input class="q3" type="radio" name="question3" value="chianna">
+<label for="q3">Head off to the nearest party.</label>
+</div>
+
+<div>
+<input class="q3" type="radio" name="question3" value="dargo">
+<label for="q3">Start a fight.</label>
+</div>
+</div>`;
+
+const fourthQuestion = `<div class="question4 intro"> <strong>Question 4</strong> <br><br> You happen upon a large sum of unclaimed money. What do you do?<br><br>
+<div>
+<input class="q4" type="radio" name="question4" value="rygel">
+<label for="q4">Hoard all the money and tell no one.</label>
+</div>
+
+<div>
+<input class="q4" type="radio" name="question4" value="crichton">
+<label for="q4">Try to convince all your friends to spend the money on something you need, while making them think it was their idea.</label>
+</div>
+
+<div>
+<input class="q4" type="radio" name="question4" value="aeryn">
+<label for="q4">Money? You haven't dealt in anything as common as money in a long time.</label>
+</div>
+
+<div>
+<input class="q4" type="radio" name="question4" value="dargo">
+<label for="q4">You don't care about money. You only care about fighting.</label>
+</div>
+</div>`;
+
+const fifthQuestion = `<div class="question5"> <strong>Question 5</strong> <br><br> How would others describe your atittude towards authority?<br><br>
+<div>
+<input class="q5" type="radio" name="question4" value="rygel">
+<label for="q5">Distrustful.</label>
+</div>
+
+<div>
+<input class="q5" type="radio" name="question4" value="aeryn">
+<label for="q5">Indoctrinated.</label>
+</div>
+
+<div>
+<input class="q5" type="radio" name="question4" value="dargo">
+<label for="q5">Aggressive.</label>
+</div>
+
+<div>
+<input class="q5" type="radio" name="question4" value="chianna">
+<label for="q5">Perturbed.</label>
+</div>
+</div>`;
+
+const finishMsg = `<div class="question6"> And you're all done.</div>`;
+
+const nextButton = document.querySelector("#select-question");
+const submitButton = document.querySelector("#submit-answer");
+const submitLabel = document.getElementById("submit-answer-label");
+const introText = document.getElementById('intro-text');
+const errorDiv = document.getElementById('error-div');
+
+function showQuestion(questionNumber = 1) {
+  if (questionNumber === 6) {
+    mainDiv.innerHTML = finishMsg;
+    submitButton.remove();
+    nextButton.remove();
+
+    answers.forEach(m => resultObj[m]++);
+    const scores = Object.entries(resultObj).sort((a,b) => b[1] - a[1]);
+    if (scores[0][1] !== scores [1][1]) {
+       document.body.append(`<div class="red-box">You are most like ${scores[0][0]}</div>`);
+    } else if (scores[0][1] === scores[1][1]) {
+      document.body.append(`<div class="red-box">You are most like ${scores[0][0]} and ${scores[1][0]}</div>`);
+    }
+   console.log(scores);
+    return;
+  }
+  const questions = [
+    firstQuestion,
+    secondQuestion,
+    thirdQuestion,
+    fourthQuestion,
+    fifthQuestion,
+  ];
+  nextButton.addEventListener("click", (event) => {
+    nextButton.style.display = 'none';
+    submitLabel.style.display = 'none';
+    introText.remove();
+   
+    if (questionNumber === 1) {
+      nextButton.innerText = 'Next question';
+    }
+    submitButton.style.display = 'block';
+    mainDiv.innerHTML = questions[questionNumber - 1];
+    submitLabel.innerText = "";
+   
+  });
+
+  submitButton.addEventListener("click", (event) => {
+    const options = document.querySelectorAll(`.q${questionNumber}`);
+    options.forEach((input, i) => {
+      if (input.checked) {
+        errorDiv.innerHTML = '';
+        nextButton.style.display = 'block';
+        submitButton.style.display = 'none';
+        answers.push(input.value);
+     
+        const message =
+          questionNumber < 5
+            ? `Answer submitted. Proceed to question ${questionNumber + 1}.`
+            : "Click the button to see your results.";
+
+        submitLabel.style.display = 'block';
+        submitLabel.innerText = message;
+        nextButton.innerText = "Next question.";
+        document.querySelector(`.question${questionNumber}`).remove();
+        questionNumber++;
+       
+
+        showQuestion(questionNumber);
+      } else {
+        errorDiv.innerHTML = '<p id="error" class="intro red-intro"> Please select an option</p>';
+       // setTimeout(() => errorDiv.innerHTML = '', 4000)
+      }
+    });
+    
+  });
+}
+
+showQuestion();
 
 
-grid.addEventListener('mouseover', e => {
-  //  console.log(e.target);
- // if (e.target.matches('.scorpy')) {
-  //  grid.setAttribute('class', 'temp-grid');
-  //   grid.innerHTML = scorpyExtendedBio;
- // }
 
-})
 
-grid.addEventListener('mouseleave', e => {
-   // grid.setAttribute('class', 'grid');
-   // grid.innerHTML = fullGrid;
-})

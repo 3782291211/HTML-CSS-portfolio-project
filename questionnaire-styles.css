@@ -1,0 +1,59 @@
+br {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 1vw; /* change this to whatever height you want it */
+}
+
+#select-question, #submit-answer {
+    display: block;
+    margin: 0 auto;
+    font-size: 3vw;
+    height: fit-content;
+    padding: 1vw;
+    width: fit-content;
+}
+
+.red-intro{
+    width: fit-content;
+    background-color: rgb(255, 103, 2);
+    color: rgb(0, 0, 0);
+    font-style: italic;
+    font-weight: bold;
+}
+
+#error-div {
+    margin: 0 auto;
+    padding: 0;
+}
+/*
+input[type='radio']:after {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 2vw;
+    top: -4px;
+    left: -4px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type='radio']:checked:after {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 15px;
+    top: -4px;
+    left: -4px;
+    position: relative;
+    background-color: #ffa500;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}*/
+
+@media {
+
+}

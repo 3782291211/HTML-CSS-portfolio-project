@@ -192,7 +192,7 @@ article#dargo > img {
     object-position: 50% 0;
 }
 
-#home, #back-to-home{
+#home, .back-to-home{
     display: block;
     width:fit-content;
     margin: 3vw auto;
@@ -237,18 +237,19 @@ article#dargo > img {
     transition: background-color 0.8s;
   }
 
-  button:hover {
+  .buttons-div > button:hover {
     background-color: #000;
     line-height: 80%;
   }
 
-  #back-to-home:hover, #home:hover {
+  .back-to-home:hover, #home:hover {
     background-color: rgb(87, 5, 5);
     color: yellow;
   }
   
   button:active {
   background-color: black;
+  color: green;
   transition: none;
 }
 
@@ -528,7 +529,7 @@ article#dargo > img {
         margin: 80px auto 100px;
     }
 
-    #home, #back-to-home {
+    #home, .back-to-home {
         font-size: 30px;
         width: 200px;
         padding: 10px;
