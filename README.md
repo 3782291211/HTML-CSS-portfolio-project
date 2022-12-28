@@ -18,13 +18,12 @@ Hello, and welcome! This repository holds all the files for a CSS & HTML project
 ## Proficiency overview
 
 Here are some of the skills I've demonstrated by completing this project:
-- Heavy emphasis on **responsive web design** through extensive use of media queries, relative units and dynamic structures, resulting in a finely-tuned layout that is very responsive to changes in viewport width.
+- Heavy emphasis on **responsive web design** through extensive use of finely-tuned media queries, relative units and dynamic structures.
 - **Interactive CSS** design, through the use of animations, pseudo-elements and pseudo-classes.
 - **DOM manipulation** using JavaScript to provide user interactivity.
 - Use of developer tools.
-   - Responsiveness was tested rigorously on a wide range of smartphone and tablet models (listed within DevTools) with varying display dimesions.
-   - I also used rendering tools and performance analytics to ensure good performance even under severed hardware/network limitations.
-
+   - Responsiveness was tested rigorously on a wide range of specific smartphone and tablet models with varying display dimesions.
+   - Performance was tested using rendering tools and analytics, including simulations of severe hardware/network limitations.
 ---
 
 ## Screenshots
