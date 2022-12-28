@@ -4,8 +4,8 @@
 
 
 html, body { 
-    margin: 0;
-    min-height: 100%;
+  margin: 0;
+  min-height: 100vh;
  }
 
 * {
@@ -21,7 +21,6 @@ html, body {
     background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
-    height: 100vh;
 }
 
 @keyframes gradient {
@@ -55,7 +54,7 @@ html, body {
 .flex-item-1 {
     border: 4px solid black;
     border-bottom: none;
-    border-radius: 1.2vw 1.2vw 0 0;
+    border-radius: 1.6vw 1.6vw 0 0;
     padding: 5px 1vw;
     background-color: rgb(251, 33, 255);
     color: whitesmoke;
@@ -99,7 +98,7 @@ h2 {
     margin: 40px auto 60px;
     font-size: 1.7vw;
     background-color: whitesmoke;
-    padding: 0.5vw;
+    padding: 1vw;
     border-radius: 1vw;
     box-shadow: 10px 0px 50px 35px #c09abe;
 }
@@ -155,7 +154,7 @@ article > p{
   font-size: 1.7vw;
 }
 
-img{
+article > img{
     height: 100%;
     object-fit: cover;
     max-width: 40%;
@@ -205,8 +204,7 @@ article#dargo > img {
 }
 
 .body-margin {
-    width: 80%;
-    margin: 3vh auto;
+    margin: 3vh 6vw;
     display: flow-root;
  }
 
@@ -224,12 +222,12 @@ article#dargo > img {
 .buttons-div > button {
     border: 0.5vw solid black;
     font-size: 2.5vw;
-    margin: 0.5rem;
+    margin: 1vw;
     flex-grow: 1;
-    padding: 2vh 0 2vh 0;
+    padding: 1.6vw 0 1.6vw;
 }
 
-  button {
+  button, input[type=submit] {
     width: 6em;
     background-color: #ee7752;
     line-height: 1.4ch;
@@ -247,7 +245,7 @@ article#dargo > img {
     color: yellow;
   }
   
-  button:active {
+  button:active, input[type=submit]:active {
   background-color: black;
   color: green;
   transition: none;
@@ -260,27 +258,22 @@ article#dargo > img {
   #button1:hover:before {
     content: "crazy";
     color: #059626;
-    font-size: 3vmin;
   }
   #button2:hover:before {
     content: "kid";
     color: #059626;
-    font-size: 3vmin;
   }
   #button3:hover:before {
     content: "hell";
     color: #059626;
-    font-size: 3vmin;
   }
   #button4:hover:before {
     content: "metre";
     color: #059626;
-    font-size: 3vmin;
   }
   #button5:hover:before {
     content: "second";
     color: #059626;
-    font-size: 3vmin;
   }
   #button6:hover:before {
     content: "Parental guidance moment!";
@@ -293,12 +286,10 @@ article#dargo > img {
   #button8:hover:before {
     content: "An edible slug; a Hynerian delicacy";
     color: #059626;
-    font-size: 3vmin;
   }
   #button9:hover:before {
     content: "A military alien race with tall statures and face tentacles";
     color: #059626;
-    font-size: 2vmin;
   }
   #button10:hover:before {
     content: "Censored!";
@@ -307,32 +298,26 @@ article#dargo > img {
   #button11:hover:before {
     content: "an alcoholic drink, ten times as potent as Earth whiskey";
     color: #059626;
-    font-size: 2vmin;
   }
   #button12:hover:before {
     content: "crispy cooked meat";
     color: #059626;
-    font-size: 3vmin;
   }
   #button13:hover:before {
     content: "a unit of speed";
     color: #059626;
-    font-size: 3vmin;
   }
   #button14:hover:before {
     content: "used to manufacture pulse weapon ammunition";
     color: #059626;
-    font-size: 2vmin;
   }
   #button15:hover:before {
     content: "fantastic";
     color: #059626;
-    font-size: 3vmin;
   }
   #button16:hover:before {
     content: "rubbish";
     color: #059626;
-    font-size: 3vmin;
   }
   #button17:hover:before {
     content: "a Luxan physiological trait, typified by bouts of uncontrollable mania";
@@ -342,27 +327,22 @@ article#dargo > img {
   #button18:hover:before {
     content: "an animal appendage";
     color: #059626;
-    font-size:3vmin;
   }
   #button19:hover:before {
     content: "girl";
     color: #059626;
-    font-size: 3vmin;
   }
   #button20:hover:before {
     content: "antique Luxan bladed weapon";
     color: #059626;
-    font-size: 3vmin;
   }
   #button21:hover:before {
     content: "a unit of currency";
     color: #059626;
-    font-size: 3vmin;
   }
   #button22:hover:before {
     content: "a deadly, asteroid-sized space-dog!";
     color: #059626;
-    font-size: 3vmin;
   }
   #button23:hover:before {
     content: "Censored!";
@@ -371,7 +351,6 @@ article#dargo > img {
   #button24:hover:before {
     content: "Hynerian exclamation";
     color: #059626;
-    font-size: 3vmin;
   }
   #button25:hover:before {
     content: "a dental hygiene worm (yes, an actual alien worm)";
@@ -381,17 +360,15 @@ article#dargo > img {
   #button26:hover:before {
     content: "the highest ranking member of the Hynerian royalty";
     color: #059626;
-    font-size: 2vmin;
   }
   #button27:hover:before {
     content: "1 hour";
     color: #059626;
-    font-size: 3vmin;
+    
   }
   #button28:hover:before {
     content: "an autonomous repair bot";
     color: #059626;
-    font-size: 3vmin;
   }
 
   .hovertext {
@@ -423,6 +400,13 @@ article#dargo > img {
     visibility: visible;
   }
 
+@media (max-width : 900px) {
+  .flex-item-1 {
+    border-radius: 15px 15px 0 0;
+    line-height: 1.7ch;
+  }
+}
+
 @media (max-width: 600px) {
     .grid {
         width: 80%;
@@ -441,6 +425,7 @@ article#dargo > img {
         gap: 5px;
     }
     h1 {
+      font-size: 30px;
         margin: 30px auto 0;
     }
 
@@ -453,7 +438,11 @@ article#dargo > img {
         font-size: 3.2vw;
     }
     
-    .intro {
+    #subtitle {
+      font-size: 23px;
+    }
+
+    .intro, #page2-intro {
         font-size: 3.2vw;
         margin-top: 30px;
         margin-bottom: 35px;
@@ -471,18 +460,55 @@ article#dargo > img {
     }
 
     .flex-item-1 {
-        font-size: 2.5vw;
+        font-size: 2.8vw;
         padding: 0 1vw;
     }
 
-    #home {
-        font-size: 3vw;
+    #home, .back-to-home {
+        font-size: 16px;
+        width: 110px;
     }
+
+    .back-to-home {
+      margin-top: 25px;
+    }
+
     .hovertext:before {
         font-size: 3.2vw;
     }
+
+    .buttons-div > button {
+      font-size: 20px;  
+    }
 }
-  
+
+@media (max-width: 800px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 600px) {
+  .buttons-div > button {
+    font-size: 30px;
+    margin: 8px;
+  }
+
+  #page2-intro {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 900px) {
+ h1 {
+  font-size: 70px;
+ }
+ #subtitle {
+  font-size: 40px;
+  margin: 0 5px;
+ }
+}
+
 @media (min-width: 1300px) {
     .grid {
         grid-template-rows: 300px 300px;
@@ -496,12 +522,12 @@ article#dargo > img {
         padding: 0;
     }
     h1 {
-        font-size: 110px;
+        font-size: 100px;
         margin: 90px auto 0;
     }
 
     h2, #subtitle {
-        font-size: 70px;
+        font-size: 60px;
     }
 
     #page2-h1 {
@@ -536,10 +562,12 @@ article#dargo > img {
     }
 
     .buttons-div > button {
-        flex-grow: 1;
-        font-size: 50px;
-        max-width: 400px;
+        font-size: 40px;
         border: 9px solid black;
+    }
+
+    .buttons-div > button:hover:before {
+        font-size: 40px;
     }
 
 }

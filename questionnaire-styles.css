@@ -1,16 +1,17 @@
 br {
-    display: block; /* makes it have a width */
-    content: ""; /* clears default height */
-    margin-top: 1vw; /* change this to whatever height you want it */
+    display: block;
+    content: "";
+    margin-top: 1vw;
 }
 
 #select-question, #submit-answer {
     display: block;
-    margin: 0 auto;
-    font-size: 3vw;
+    margin: 2vw auto 2vw;
+    font-size: 2vw;
     height: fit-content;
     padding: 1vw;
     width: fit-content;
+    border-radius: 20px;
 }
 
 .red-intro{
@@ -21,10 +22,55 @@ br {
     font-weight: bold;
 }
 
-#error-div {
+.intro {
+    box-shadow: 10px 0px 50px 30px #c09abe;
+    margin: 3.5vw auto;
+}
+
+.image-description {
+    border: 5px solid black;
+    border-radius: 20px;
+    background-color: black;
+    max-width: 900px;
+    width: 60%;
+    margin: 3.5vw auto;
+    height: 35vw;
+    position: relative;
+    max-height: 350px;
+    height: 25vw;
+}
+
+.image-description > h2 {
+margin: 2% 100% 1% 1%;
+font-size: 4vw;
+color: aqua;
+}
+
+.image-description > p {
+  margin: 0 50% 2% 1%;
+  color: whitesmoke;
+  font-size: 2vw;
+  width: 56%;
+}
+
+.image-description > img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    max-width: 40%;
+    float: right;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0, -50%);
+}
+
+/*#error-div {
     margin: 0 auto;
     padding: 0;
-}
+}*/
+
 /*
 input[type='radio']:after {
     width: 1vw;
@@ -54,6 +100,60 @@ input[type='radio']:checked:after {
     border: 2px solid white;
 }*/
 
-@media {
+@media (max-width: 850px) {
+    h1 {
+        margin-top: 45px;
+    }
+    #submit-answer-label {
+        margin: 7vw auto;
+        font-size: 14px;
+    }
+    #intro-text {
+        font-size: 14px;
+        margin: 7vw auto;
+    }
+    #select-question, #submit-answer {
+        font-size: 16px;
+        width: 90px;
+        margin: 6vw auto;
+    }
+    .main-div > div {
+        font-size: 11px;
+        margin: 7vw auto;
+    }
+    #error {
+        font-size: 12px;
+        margin: 6vw auto;
+    }
+}
 
+@media (max-width: 1200px) {
+    .intro {
+        font-size: 2vw;
+    }
+}
+
+@media (min-width: 1300px) { 
+    .image-description {
+        margin: 40px auto;
+    }
+}
+
+@media (min-width: 1800px) { 
+    .image-description > h2 {
+        font-size: 70px;
+    }
+}
+
+@media (min-width: 1500px) { 
+    .back-to-home{
+        margin: 70px auto;
+    }
+    .image-description > p {
+        font-size: 30px;
+    }
+    #select-question, #submit-answer {
+        font-size: 50px;
+        height: fit-content;
+    }
 }
