@@ -66,17 +66,16 @@ color: aqua;
     transform: translate(0, -50%);
 }
 
-/*#error-div {
-    margin: 0 auto;
-    padding: 0;
-}*/
+input[type='radio'] {
+vertical-align: middle;
+margin: 0.2vw;
+}
 
-/*
-input[type='radio']:after {
-    width: 1vw;
-    height: 1vw;
+/*input[type='radio']:after {
+    width: fit-content;
+    height: fit-content;
     border-radius: 2vw;
-    top: -4px;
+    top: -8px;
     left: -4px;
     position: relative;
     background-color: #d1d3d1;
@@ -87,11 +86,11 @@ input[type='radio']:after {
 }
 
 input[type='radio']:checked:after {
-    width: 1vw;
-    height: 1vw;
+    width: 3vw;
+    height: 3vw;
     border-radius: 15px;
-    top: -4px;
-    left: -4px;
+    top: -0.4px;
+    left: -1px;
     position: relative;
     background-color: #ffa500;
     content: '';
