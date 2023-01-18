@@ -212,7 +212,7 @@ function showQuestion(questionNumber = 1) {
    
     if (questionNumber === 1) {
       nextButton.innerText = 'Next question';
-    }
+    };
     submitButton.style.display = 'block';
     mainDiv.innerHTML = questions[questionNumber - 1];
     submitLabel.innerText = "";
@@ -222,7 +222,7 @@ function showQuestion(questionNumber = 1) {
   submitButton.addEventListener("click", () => {
     if (submitButton.style.display !== 'none') {
       error.style.display = 'block';
-    } 
+    };
     const options = document.querySelectorAll(`.q${questionNumber}`);
 
     options.forEach(input => {
