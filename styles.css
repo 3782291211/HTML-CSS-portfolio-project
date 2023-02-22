@@ -203,6 +203,10 @@ article#dargo > img {
     border-radius: 1vw;
 }
 
+#home {
+  margin: 5vw auto;
+}
+
 .body-margin {
     margin: 3vh 6vw;
     display: flow-root;
